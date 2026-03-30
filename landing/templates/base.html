@@ -1,0 +1,97 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackline</title>
+    <link rel="icon" type="image/svg+xml" href="{% static '/img/titleLogo.svg' %}" />
+    <link rel="stylesheet" href="{% static '/css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/home.css' %}" />
+  </head>
+<body>
+          <div class="header__wrapper">
+          <header class="header">
+            <div class="logo"><a href="{% url 'landing_view' %}">BLΛCKLINE</a></div>
+            <nav aria-label="Основное меню">
+              <ul>
+                <li><a href="{% url 'landing_view' %}">Главная</a></li>
+                <li><a href="#categorySection">Каталог</a></li>
+                <li><a href="#aboutUsSection">О нас</a></li>
+              </ul>
+            </nav>
+            <p class="header__number">+373 76 986 459</p>
+          </header>
+        </div>
+            {% block content %}
+            {% endblock %}
+            <footer class="footer">
+      <div class="container">
+        <div class="footer__inner glassEffect">
+          <div class="footer__info">
+            <nav class="footer__navigation" aria-label="Навигация по сайту">
+              <a href="{% url 'landing_view' %}" class="footer__logo">BLΛCKLINE</a>
+              <ul class="footer__info--navList">
+                <li><a href="{% url 'landing_view' %}">Главная</a></li>
+                <li><a href="#categorySection">Каталог</a></li>
+                <li><a href="#aboutUsSection">О нас</a></li>
+              </ul>
+            </nav>
+            <div class="footer__schedule">
+              <p class="footer_schedule-scheduleP">График Работы:</p>
+              <p>
+                Понедельник - Воскресенье <br />
+                8:00 - 22:00
+              </p>
+            </div>
+            <div class="footer__connectionWithUs">
+              <p>Связь с нами</p>
+              <ul class="footer__info--socialMediaList">
+                <li>
+                  <a href="#"
+                    ><img
+                      src="{% static '/img/tg.svg' %}"
+                      alt=""
+                      width="25"
+                      height="25"
+                    />Telegram</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="{% static '/img/gram.svg' %}"
+                      alt=""
+                      width="25"
+                      height="25"
+                    />Instagram</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="{% static '/img/svgGmail.svg' %}"
+                      alt=""
+                      width="25"
+                      height="25"
+                    />Gmail</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="{% static '/img/999.svg' %}"
+                      alt=""
+                      width="25"
+                      height="25"
+                    />999</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</head>
