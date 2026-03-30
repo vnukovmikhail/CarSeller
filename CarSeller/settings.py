@@ -119,7 +119,7 @@ USE_TZ = True
 
 
 # Путь, где лежат твои исходные стили (разработка)
-STATICFILES_DIRS = [BASE_DIR / 'static_dev'] 
+STATICFILES_DIRS = [BASE_DIR / 'staticfiles'] 
 
 # Куда Django соберет всё для Nginx (продакшен)
 STATIC_ROOT = BASE_DIR / 'static' 
